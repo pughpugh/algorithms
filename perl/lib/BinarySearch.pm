@@ -25,7 +25,7 @@ our @EXPORT_OK = qw( recursive );
 
 =head2 C<recursive( ARRAYREF, NEEDLE )>
 
-Finds the specified needle in arrayfre haystack
+Finds the specified needle in arrayref haystack
 
 =cut
 
