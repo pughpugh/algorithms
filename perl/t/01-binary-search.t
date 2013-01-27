@@ -20,8 +20,21 @@ my @test_data = (
 );
 
 foreach my $test ( @test_data ){
-    is( recursive( $test->{list}, $test->{search} ), $test->{result} );
-    is( iterative( $test->{list}, $test->{search} ), $test->{result} );
+    is( 
+        recursive( $test->{list}, $test->{search} ), 
+        $test->{result},
+        "recursivly searching for " . $test->{search} . " in " .
+            join(', ', @{$test->{list}} ) . " expecting index " . 
+            ( ( $test->{result} ) ? $test->{result} : 'undef' )
+    );
+    is( 
+        iterative( $test->{list}, $test->{search} ), 
+        $test->{result},
+        "iterativly searching for " . $test->{search} . " in " .
+            join(', ', @{$test->{list}} ) . " expecting index " . 
+            ( ( $test->{result} ) ? $test->{result} : 'undef' )
+    );
+    
 }
 
 done_testing();
