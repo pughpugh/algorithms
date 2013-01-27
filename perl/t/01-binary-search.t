@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use BinarySearch qw( recursive );
+use BinarySearch qw( recursive iterative );
 use Test::More;
 
 my @numeric_list_1 = qw! 1 2 3 4 5 6 7 8 9 10 !;
@@ -21,6 +21,7 @@ my @test_data = (
 
 foreach my $test ( @test_data ){
     is( recursive( $test->{list}, $test->{search} ), $test->{result} );
+    is( iterative( $test->{list}, $test->{search} ), $test->{result} );
 }
 
 done_testing();

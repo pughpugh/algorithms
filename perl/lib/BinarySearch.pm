@@ -19,13 +19,13 @@ use warnings;
 use base 'Exporter';
 use POSIX;
 
-our @EXPORT_OK = qw( recursive );
+our @EXPORT_OK = qw( recursive iterative );
 
 =head1 SUBROUTINES
 
 =head2 C<recursive( ARRAYREF, NEEDLE )>
 
-Finds the specified needle in arrayref haystack
+Finds the specified needle in arrayref haystack in a recursive fashion.
 
 =cut
 
@@ -51,6 +51,39 @@ sub recursive {
     else { # Match
         return $midindex;
     }
+
+    return;
+}
+
+=head2 C<iterative( ARRAYREF, NEEDLE )>
+
+Finds the specified needle in arrayref haystack in an iterative fashion.
+
+=cut
+
+sub iterative {
+    my ( $array, $value ) = @_;
+    my $min = 0;
+    my $max = @$array;
+
+    while ( $max >= $min ){
+        my $midindex = floor( ( $max + $min ) / 2 );
+        my $midvalue = $array->[$midindex];
+
+        return if ! defined $midvalue; # Index out of range
+
+        if( $midvalue > $value ){
+            $max = $midindex - 1;
+        }
+        elsif( $midvalue < $value ){
+            $min = $midindex + 1;
+        }
+        else{
+            return $midindex;
+        }
+    }
+
+    return;
 }
 
 =head1 AUTHOR
