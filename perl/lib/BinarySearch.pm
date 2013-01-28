@@ -33,7 +33,7 @@ sub recursive {
     my ( $array, $value, $min, $max ) = @_;
 
     $min //= 0;
-    $max //= @$array;
+    $max //= @$array - 1;
 
     return if $max < $min;
 
@@ -64,7 +64,7 @@ Finds the specified needle in arrayref haystack in an iterative fashion.
 sub iterative {
     my ( $array, $value ) = @_;
     my $min = 0;
-    my $max = @$array;
+    my $max = @$array - 1;
 
     while ( $max >= $min ){
         my $midindex = floor( ( $max + $min ) / 2 );

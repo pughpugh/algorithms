@@ -20,9 +20,16 @@ class TestRecursive < Test::Unit::TestCase
 
         for test in test_data
             assert_equal( 
-                recursive( test[:list], test[:search] ), 
                 test[:result], 
-                "searching for #{test[:search]} in " +
+                recursive( test[:list], test[:search] ), 
+                "recursivly searching for #{test[:search]} in " +
+                    test[:list].to_s + " Expecting index #{test[:result]}"
+            )
+
+            assert_equal( 
+                test[:result], 
+                iterative( test[:list], test[:search] ), 
+                "iterativly searching for #{test[:search]} in " +
                     test[:list].to_s + " Expecting index #{test[:result]}"
             )
         end
