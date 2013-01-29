@@ -3,7 +3,6 @@
 # Author:: Hugh Gallagher [http://www.hughgallagher.co.uk]
 
 module BinarySearch
-
     
     # Finds the specified needle in array haystack in a recursive fashion
     #   
