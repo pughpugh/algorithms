@@ -4,10 +4,11 @@ BinarySearch - Binary Search Algorithms
 
 =head1 SYNOPSIS
 
-    use BinarySearch qw( recursive );
+    use BinarySearch qw( recursive iterative );
 
     my @numbers = qw( -10 -2 0 3 6 88 900 1001 );
     my $index = recursive \@numbers, 88; 
+    my $index = iterative \@numbers, 900; 
     
 =cut
 

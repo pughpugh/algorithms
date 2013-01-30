@@ -4,9 +4,11 @@ FibonacciSequence - Fibonacci Sequence Algorithms
 
 =head1 SYNOPSIS
 
-    use FibonacciSequence qw( recursive iterative );
+    use FibonacciSequence qw( recursive iterative closed_form );
 
     my $number = recursive $index;
+    my $number = iterative $index;
+    my $number = closed_form $index;
     
 =cut
 
@@ -16,7 +18,6 @@ use strict;
 use warnings;
 
 use base 'Exporter';
-use POSIX;
 
 our @EXPORT_OK = qw( recursive iterative closed_form );
 
@@ -24,7 +25,7 @@ our @EXPORT_OK = qw( recursive iterative closed_form );
 
 =head2 C<recursive( INDEX )>
 
-Computes the Nth term of the Fibonacci in a recursive fashion
+Computes the Nth term of the Fibonacci sequence in a recursive fashion
 
 =cut
 
@@ -37,7 +38,7 @@ sub recursive {
 
 =head2 C<iterative( INDEX )>
 
-Computes the Nth term of the Fibonacci in a iterative fashion
+Computes the Nth term of the Fibonacci sequence in a iterative fashion
 
 =cut
 
@@ -59,7 +60,7 @@ sub iterative {
 
 =head2 C<closed_form( INDEX )>
 
-Computes the Nth term of the Fibonacci in a closed form fashion
+Computes the Nth term of the Fibonacci sequence in a closed form fashion
 
 =cut
 
