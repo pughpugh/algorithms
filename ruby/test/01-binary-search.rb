@@ -1,8 +1,8 @@
 require 'binary_search'
 require 'test/unit'
 
-class TestRecursive < Test::Unit::TestCase
-    def test_simple 
+class TestBinarySearch < Test::Unit::TestCase
+    def test_binary_search
         numeric_list_1 = (1..10).to_a
         numeric_list_2 = [ -1001, -232, -3, 0, 4, 78, 89, 99, 10000 ]
 
