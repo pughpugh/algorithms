@@ -1,10 +1,17 @@
-Algorithms
-==========
+# Algorithms
 
-This is just a play area to learn various algorithms.
+This is just a play area to practice the implementation various algorithms in different languages.
 
-I know Perl and am learning Ruby, so I'll be attempting to implement using both.
+## Languages
+
+* Perl
+* Ruby
+
+## Algorithms
+
+* Binary Search
+* Fibonacci Sequence
 
 That is all.
 
-PughPugh.
+Hugh
