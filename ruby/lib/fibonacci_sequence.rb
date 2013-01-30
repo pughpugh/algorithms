@@ -25,7 +25,7 @@ module FibonacciSequence
 
         oldest, old, current = 0, 1, 1
 
-        ( 3..index ).to_a.each do |i|
+        ( 3..index ).each do |i|
             oldest  = old
             old     = current
             current = old + oldest
