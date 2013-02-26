@@ -9,8 +9,14 @@ This is just a play area to practice the implementation various algorithms in di
 
 ## Algorithms
 
+### Search
+
 * Binary Search
 * Fibonacci Sequence
+
+### Sort
+
+* Quadratic Selection
 
 That is all.
 
